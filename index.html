@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>DexDraw</title>
+</head>
+
+
+<body>
+    <div class="topbar">
+        <div class="logo">DRD</div>
+       
+        <div class="nav">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+        <div id="newd">New</div> &nbsp;&nbsp;&nbsp;&nbsp;
+        <div>Save</div>  &nbsp;&nbsp;&nbsp;&nbsp;
+        <div>Open</div>
+          <span style="margin-left: 250px">X</span> &nbsp;&nbsp; <input disabled id="witt" type="text">  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        <span >Y</span> &nbsp;&nbsp; <input disabled id="hitt" type="text">
+    </div>
+
+
+    </div>
+
+<div class="sidebar">
+    <i class="fa fa-arrows-alt"></i>
+    <i id="line" class="fas fa-arrows-alt-h"></i>
+    <i id="square" class="far fa-square"></i>
+    <i id="circle" class="far fa-circle"></i>
+    <i id="txt" class="fa fa-text-height"></i>
+    <i class="fas fa-redo-alt"></i>
+    
+
+
+</div>
+
+<div id="canvasWrapper">
+
+<canvas id="myCanva">Dareedyone says Your browser does not support canvas !</canvas>
+<div id="insert">
+    <div class="ins-header">
+        <span>New Canvas</span>
+        <div id="canc">X</div>
+    </div>
+
+    <div class="ins-body">
+
+    <p>Please insert valid values in px !</p>
+
+    Width &nbsp;&nbsp;<input id="wid" type="number"> <br> <br>
+
+    Height &nbsp;&nbsp;<input id="het" type="number"> <br> <br>
+
+
+    <button id="ok" type="button">Ok</button>
+
+</div>
+
+</div>
+</div>
+
+<div class="c-palette">
+    <h4>Fill color</h4>
+        <input value='#ffffff' id="fill" type="color">
+
+        <h4>Border color</h4>
+    <input id="bord"  type="color">
+
+    <h4>Line width</h4>
+    <input  id="lw" placeholder="1"  type="number"> <br>
+    <div id="fnt">
+            <h4>Font family</h4>
+           
+            <select id="fc">
+                    <option value="Arial">Arial</option>
+                    <option value="monospace">Monospace</option>
+                    <option value="cursive">Cursive</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="serif">Serif</option>
+                    <option value="sans-serif">Sans-Serif</option>
+                  </select>
+            
+            <h4>Font Size</h4>
+            <input id="sz" placeholder="25" type="number">
+
+            <h4>Font Style</h4>
+            <select id="st">
+                    <option value="normal">Normal</option>
+                    <option value="italic">Italic</option>
+                    <option value="small-caps">Small Caps</option>
+                    <option value="bold">Bold</option>
+                    <option value="bolder">Bolder</option>
+                    <option value="lighter">Lighter</option>
+                    <option value=800>Heavy</option>
+                  </select>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,179 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(13, 104, 146);
+}
+
+.topbar {
+    background-color: #535353;
+    width: 90vw; 
+    height: 30px;
+  
+}
+
+.nav {
+    display: flex;
+   
+    padding-top: 5px;
+    color: white;
+   
+}
+
+
+
+.sidebar {
+    height: 80vh;
+    width: 30px;
+    background-color: #535353;
+    border: 2px solid black;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+
+
+
+
+#canvasWrapper {
+    background-color: #262626;
+    float: left;
+    width: 1000px; 
+    height: 600px;
+    position: relative;
+    display: table;
+}
+
+
+
+.c-palette {
+    float: left;
+    width: 250px;
+    height: 90vh;
+    background-color: #535353;
+    border-top: 10px solid black;
+}
+
+
+.logo {
+    color: rgb(23, 102, 175);
+    font-size: 22px;
+    font-weight: bold;
+    float: left;
+}
+
+#newd:hover {
+    cursor: default;
+}
+
+#insert {
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 17%;
+    left: 25%;
+    border: 2px solid  rgb(23, 102, 175);
+    display: none;
+}
+
+i {
+    font-size: 15px;
+    color: white;
+}
+
+canvas {
+    display: none;
+    background-color: #fff;
+  
+    vertical-align: middle;
+    margin: auto;
+}
+
+.ins-header {
+    height: 30px;
+    width: 100%;
+    background-color: #527E9E;
+   text-align: center;
+}
+
+.topbar input {
+width: 50px;
+border: none;
+background-color: rgb(184, 179, 179);
+}
+
+.ins-header div, .ins-header div:active {
+    background-color: #E04343;
+    color: white;
+    width: 30px;
+    height: 15px;
+    float: right;
+    font-size: 10px;
+    cursor: default;
+}
+
+.ins-header div:hover {
+    background-color: rgb(248, 80, 80);
+    
+}
+
+.ins-body {
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.c-palette {
+    padding-left: 10px;
+}
+.c-palette input {
+width: 50%;
+height: 40px;
+border: none;
+}
+
+.c-palette h4 {
+    color:white;
+}
+
+
+#lw {
+    height: 20px;
+    text-align: center;
+    border: 5px solid #DDDDDD;
+}
+
+
+#fnt {
+   display: none;
+   
+    width: 50%;
+    line-height: 1px;
+    
+}
+
+
+
+#fnt input {
+    height: 15px;
+    width: 80%;
+}
+
+#fnt select {
+    width: 80%;
+    height: 20px;
+
+}
+
+
+
+
+#fnt h4 {
+    font-size: 12px;
+}
+
+
+
+
