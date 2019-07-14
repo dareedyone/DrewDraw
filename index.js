@@ -1,10 +1,19 @@
 'use strict'
 var fl = 'white';
 var bd =  'black';
-var lww ;
+var lww = 1;
 var fm = 'serif';
-var fs;
+var fs ='25px';
 var ss = 'normal';
+
+
+lw.onkeypress = (evt) => {
+    evt.preventDefault();
+}
+
+sz.onkeypress = (evt) => {
+    evt.preventDefault();
+}
 
 var shape = '';
 fill.onchange = () => {
@@ -51,6 +60,7 @@ bord.onchange = () => {
 
 lw.onchange = () => {
     lww = lw.value;
+  
     switch (shape) {
         case 'circle':
             circle.onclick();
@@ -92,8 +102,8 @@ newd.addEventListener('click', create);
 
 function create() {
     insert.style.display = 'block';
-    wid.value = 700;
-    het.value = 500;
+    wid.value = '';
+    het.value = '';
     canc.onclick = () => insert.style.display = 'none';
     ok.onclick = () => {
         if (wid.value <= 1000 && wid.value > 0 && het.value <= 600 && het.value > 0) {
@@ -104,7 +114,7 @@ function create() {
             myCanva.style.display = 'block';
             myCanva.setAttribute('width', w);
             myCanva.setAttribute('height', h);
-            // myCanva.style.cursor = 'row-resize';
+           
             (h <= 500 && w) ? myCanva.style.margin = '5% auto' : myCanva.style.marginTop = 0;
 
 
@@ -131,6 +141,8 @@ function create() {
 
 line.onclick = () => {
     shape = 'line';
+    fnt.style.display = 'none';
+    fnt.style.display = 'none';
     myCanva.style.cursor = 'crosshair';
     var ctx = myCanva.getContext('2d');
     var x;
@@ -162,6 +174,8 @@ line.onclick = () => {
 square.onclick = () => {
     myCanva.style.cursor = 'crosshair';
     shape = 'square';
+    fnt.style.display = 'none';
+  
 
     var ctx = myCanva.getContext('2d');
     var x = 0;
@@ -190,6 +204,7 @@ square.onclick = () => {
         ctx.rect(x, y, xx - x, xy - y);
         ctx.stroke();
         ctx.fill();
+        ctx.save();
 
 
     }
@@ -203,6 +218,7 @@ circle.onclick = () => {
     myCanva.style.cursor = 'crosshair';
     shape = 'circle';
     var ctx = myCanva.getContext('2d');
+    fnt.style.display = 'none';
     var x;
     var y;
 
@@ -211,8 +227,9 @@ circle.onclick = () => {
 
     ctx.strokeStyle = bd;
     ctx.fillStyle = fl;
-    ctx.lineWidth = lww;
+    
     myCanva.onmousedown = () => {
+        ctx.lineWidth = lww;
         ctx.beginPath();
         x = event.offsetX;
         y = event.offsetY;
@@ -228,6 +245,7 @@ circle.onclick = () => {
        
 
     }
+    fnt.style.display = 'none';
 
 }
 
@@ -254,11 +272,68 @@ txt.onclick = () => {
         if (tx) {
             ctx.fillText(tx, x, y);
             ctx.strokeText(tx, x, y);
-            ctx.fill();
+           
         }
         
 
     }
+  
+}
+
+
+
+sav.onclick = () => {
+    if (myCanva.getAttribute('width') > 0) {
+ 
+    var d=myCanva.toDataURL("image/png");
+    var w=window.open('about:blank','image from canvas');
+    w.document.write("<img src='"+d+"' alt='from canvas'/>  <b>Right click on the image to save your work</b>");
+   
+}
+}
+
+
+opn.onclick = () => {
+    fnt.style.display = 'none';
+    if (myCanva.getAttribute('width') > 0) {
+    alert('click the position you want the image on the canvas');
+    myCanva.style.cursor = 'default';
+}
+    var x;
+    var y;
+
+    // var xx;
+    // var xy;
+     // mgw.onchange = () => { 
+    //     xx = mgw.value;     
+    // }
+    // mgh.onchange = () => { 
+    //     xy = mgh.value;
+    // }
+    // if (xx >0 && xy > 0 ) {
+    //     alert('halleluyaaaaaah');
+      // imgg.style.display = 'block';
+    // }else(alert('nil'));
+    myCanva.onmousedown = () => {
+
+        x = event.offsetX;
+        y = event.offsetY;
+        fle.style.display = 'block';
+      
+       
+    }
+
+fle.onchange = () => {
+    var ctx = myCanva.getContext('2d');
+const img = new Image();
+      img.src = fle.value.replace('C:\\fakepath\\', 'images/');
+      img.onload = () => {
+        ctx.drawImage(img, x, y);
+      };
+
+      fle.style.display = 'none';
+     
+}
 }
 
 

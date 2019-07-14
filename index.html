@@ -18,8 +18,9 @@
         <div class="nav">
                 &nbsp;&nbsp;&nbsp;&nbsp;
         <div id="newd">New</div> &nbsp;&nbsp;&nbsp;&nbsp;
-        <div>Save</div>  &nbsp;&nbsp;&nbsp;&nbsp;
-        <div>Open</div>
+        <div id="sav">Save</div>  &nbsp;&nbsp;&nbsp;&nbsp;
+        <div id="opn">Open</div>  &nbsp;&nbsp;&nbsp;
+        <input id="fle" type="file">
           <span style="margin-left: 250px">X</span> &nbsp;&nbsp; <input disabled id="witt" type="text">  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
         <span >Y</span> &nbsp;&nbsp; <input disabled id="hitt" type="text">
     </div>
@@ -33,7 +34,7 @@
     <i id="square" class="far fa-square"></i>
     <i id="circle" class="far fa-circle"></i>
     <i id="txt" class="fa fa-text-height"></i>
-    <i class="fas fa-redo-alt"></i>
+    <!-- <i id="rst" class="fas fa-redo-alt"></i> -->
     
 
 
@@ -72,7 +73,7 @@
     <input id="bord"  type="color">
 
     <h4>Line width</h4>
-    <input  id="lw" placeholder="1"  type="number"> <br>
+    <input id="lw" value="1"  type="number"> <br>
     <div id="fnt">
             <h4>Font family</h4>
            
@@ -88,7 +89,7 @@
                   </select>
             
             <h4>Font Size</h4>
-            <input id="sz" placeholder="25" type="number">
+            <input value="10" id="sz" type="number">
 
             <h4>Font Style</h4>
             <select id="st">
@@ -102,6 +103,15 @@
                   </select>
 
     </div>
+
+    <!-- <div id="imgg">
+            <h4>Width</h4>
+            <input  id="mgw" type="number">
+
+            <h4>Height</h4>
+            <input  id="mgh" type="number">
+
+    </div> -->
 
 </div>
 

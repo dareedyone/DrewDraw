@@ -62,9 +62,16 @@ body {
     float: left;
 }
 
-#newd:hover {
+#newd:hover, #sav:hover, #opn:hover {
     cursor: default;
 }
+
+#fle {
+    width: 180px;
+    display: none;
+}
+ 
+
 
 #insert {
     width: 50%;
@@ -154,6 +161,10 @@ border: none;
     
 }
 
+/* #imgg {
+    width: 50%;
+} */
+
 
 
 #fnt input {
@@ -170,7 +181,7 @@ border: none;
 
 
 
-#fnt h4 {
+#fnt h4, #imgg h4 {
     font-size: 12px;
 }
 
