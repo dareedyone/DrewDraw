@@ -38,7 +38,7 @@ body {
 #canvasWrapper {
     background-color: #262626;
     float: left;
-    width: 1000px; 
+    width: 75%; 
     height: 600px;
     position: relative;
     display: table;
